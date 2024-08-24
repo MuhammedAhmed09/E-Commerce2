@@ -1,38 +1,177 @@
-.App {
+/* navbar css */
+.navbar-bg {
+  background-color: #e9ecef;
+}
+.navbar-bg h5 {
+  font-weight: 800;
+}
+.navbar-bg .cart-icon {
+  font-size: 20px;
+}
+.navbar-bg .nav-logo {
+  width: 80px;
+}
+
+/* home */
+
+/* slide css */
+.slide .image {
+  height: 90vh;
+  background: #e9ecef;
+}
+.slide p {
+  color: #0e0e0e;
+  text-transform: capitalize;
+  font-size: 6rem;
+  font-weight: 800;
+  position: relative;
+  margin-left: -80%;
+}
+
+/* category */
+.category {
+  margin-top: 20vh;
+  
+}
+.category h2 {
+  font-weight: 800;
+  margin-bottom: 10vh;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.category .cat-img {
+  width: 100%;
+  overflow: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.category img {
+  width: 100%;
+  transition: all .7s ease-in-out;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.category img:hover {
+  transform: scale(1.1);
+}
+.category .cat-details {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.category .cat-details h5 {
+  font-weight: 700;
+}
+.category .cat-details h6 {
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+/* shop css */
+.shop .shop-center {
+  background-image: url("/src/Images/d2c46b4a25816a9c5f07ed83b984991a.c6bc345c2347d64f242d.jpg");
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 60vh;
+  align-items: center;
+  overflow: hidden;
+}
+.shop .shop-center p {
+  text-align: center;
+  font-weight: 800;
+  font-size: 3rem;
+  position: relative;
+}
+.shop .shop-center a {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.shop .shop-center a:hover {
+  color: rgba(151, 238, 238, 0.596);
+}
+.shop .shop-center .span {
+  font-size: 20px;
+  font-weight: 800;
+}
+.shop .shop-map {
+  align-items: center;
+  text-align: center;
+}
+.shop .shop-map-img {
+  width: 100%;
+}
+.shop .shop-detailsall {
+  display: flex;
+  justify-content: space-between;
+}
+.shop .shop-map-details .shop-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+.shop .shop-map-details h6 {
+  color: #0e0e0eb4;
+  margin-left: 0;
+}
+.shop .shop-map-details h6:hover {
+  color: #000;
+}
+.shop .shop-cart {
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 15px;
+  border: #000 solid 1px;
+  padding: 0 9px 7px;
+  transition: .9s;
+}
+.shop .shop-cart:hover {
+  color: #fff;
+  background: #000;
 }
 
-.App-link {
-  color: #61dafb;
+/* footer css */
+.foot-up {
+  margin-top: 30vh;
+  background-color: #e9ecef;
+  padding: 10vh 0;
+}
+.foot-up h3 {
+  font-weight: 800;
+}
+.foot-up h6 {
+  font-weight: 750;
+  line-height: 35px;
+}
+.foot-up .foot-icon p {
+  border: 1px solid #6c757d;
+  border-radius: 50%;
+  padding: 2px 10px 10px;
+  color: #6c757d;
+  font-size: 25px;
+  transition: .7s;
+}
+.foot-up .foot-icon p:hover {
+  color: #000;
+}
+.foot-up .inputs {
+  display: flex;
+  margin-top: 5vh;
+}
+.foot-up .input-email {
+  width: 70%;
+  outline: none;
+  border: none;
+  justify-content: flex-start;
+  padding: 9px;
+  font-size: 20px;
+  font-weight: 750;
+}
+.foot-up .input-submit {
+  width: 30%;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 750;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
