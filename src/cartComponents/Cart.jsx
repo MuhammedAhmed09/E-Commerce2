@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItems from './CartItems';
 import './Cart.css'
+import { Col, Row } from 'react-bootstrap';
 
 const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
     const handleEmptyCart = () => onEmptyCart();
 
     const EmptyCart = () => (
-        <div>
+        <div className='empty'>
             <p>Your cart is currently empty.</p>
             <Link to="/Shop">
-                <button>Back to Shop</button>
+                <button className='btn-empty'>Back to Shop</button>
             </Link>
         </div>
     );
@@ -32,24 +33,24 @@ const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
 
     return (
         <div className='box-cart'>
-            <h3>Shopping Cart</h3>
+            <p className='parghraph-head'>Shopping Cart</p>
             { typeof cart.line_items !== 'undefined' && cart.line_items.length ?
             (
             <div>
-                <table>
-                <thead>
-                    <tr>
-                    <th><p>PRODUCT DETAILS</p></th>
-                    <th><p>UNIT PRICE</p></th>
-                    <th><p>QUANTITY</p></th>
-                    <th><p>AMOUNT</p></th>
-                    <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <FilledCart />
-                </tbody>
-                </table>
+                <div>
+                    <Row className='text-head-cart'>
+                        <Col lg={4} className='img-name'>
+                            <p>PRODUCT</p>
+                            <p>DETAILS</p>
+                        </Col>
+                        <Col lg={3}><p>UNIT PRICE</p></Col>
+                        <Col lg={2}><p>QUANTITY</p></Col>
+                        <Col lg={3}><p>AMOUNT</p></Col>
+                    </Row>
+                    <Row>
+                        <FilledCart />
+                    </Row>
+                </div>
 
                 <button onClick={handleEmptyCart} className="mt-5">Empty Cart</button>
                 </div>

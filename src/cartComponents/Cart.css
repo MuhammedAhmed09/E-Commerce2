@@ -1,0 +1,43 @@
+.empty {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.empty .btn-empty {
+    border: none;
+    background-color: #000;
+    color: #ffff;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: .7s;
+}
+
+.empty .btn-empty:hover {
+    background-color: transparent;
+    color: #bfbfbf;
+    border: 1px solid #bfbfbf;
+}
+
+.box-cart .parghraph-head {
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin: 15% 0 -2px;
+}
+
+.box-cart .img-name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-item .image-item {
+    width: 100%;
+    height: 50px;
+}
+
+.cart-item .img-name {
+    display: flex;
+    justify-content: space-between;
+}
