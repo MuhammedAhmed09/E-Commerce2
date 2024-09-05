@@ -1,36 +1,30 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const CartItems = ({ item, onUpdateToCart, onRemoveFromCart }) => {
     const handleUpdateToCart = (lineItemId, quantity) => onUpdateToCart(lineItemId, quantity);
     const handleRemoveFromCart = (lineItemId) => onRemoveFromCart(lineItemId);
 
     return (
-        <table className="cart-item">
-            <div>
+        <Container>
+            <table >
             <Row className='text-head-items' key={item.id}>
-            <Col  lg={4}>
-                <div className='img-name'>
-                    {item.image && <img className='image-item' src={item.image.url} alt={item.name} />}
-                    <p>{item.name}</p>
-                </div>
-            </Col>
-            <Col lg={3}>
-                <p>{item.line_total && item.line_total.formatted_with_symbol}</p>
-            </Col>
-            <Col lg={2}>
-                {item.quantity}
-            </Col>
-            <Col lg={3}>
-                <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
-                <p>
-                <button onClick={() => handleUpdateToCart(item.id, item.quantity - 1)}>-</button>
-                <button onClick={() => handleUpdateToCart(item.id, item.quantity + 1)}>+</button>
-                </p>
-            </Col>
+                <Col md={6} sm={4}>
+                    {item.image && <img className='image-item' src={item.image.url} alt={item.name} style={{width:"100%"}} />}
+                </Col>
+                <Col md={6} sm={8}>
+                    <h4>Tittle: {item.name}</h4>
+                    <h3>Price: {item.line_total && item.line_total.formatted_with_symbol}</h3>
+                    <h3>Quantity: {item.quantity}</h3>
+                    <h3>
+                    <button onClick={() => handleUpdateToCart(item.id, item.quantity - 1)}>-</button>
+                    <button onClick={() => handleUpdateToCart(item.id, item.quantity + 1)}>+</button>
+                    </h3>
+                    <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
+                </Col>
             </Row>
-            </div>
-        </table>
+            </table>    
+        </Container>
     );
 };
 

@@ -11,14 +11,14 @@ const Home = () => {
 
             <Carousel>
                 <Carousel.Item>
-                    <img src={require('./Images/Home-default-1510-3.png')} className='w-100 image' alt="" />            <Carousel.Caption>
-                    <p>the white</p>
+                    <img src={require('./Images/pexels-jaganjijo-8373456.jpg')} className='w-100 image' alt="" />            <Carousel.Caption>
+                    <p>your fav</p>
                     <p>collection</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src={require('./Images/Home-default-1510-4.png')} className='w-100 image' alt="" />            <Carousel.Caption>
-                    <p >the black</p>
+                    <img src={require('./Images/pexels-photo-9307093.jpg')} className='w-100 image' alt="" />            <Carousel.Caption>
+                    <p >your fav</p>
                     <p>collection</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -26,6 +26,7 @@ const Home = () => {
 
         </div>
         <Container className='category'>
+
             <h2>Categories</h2>
             <Row>
                 <Col lg={3} md={6} sm={12} >
@@ -33,12 +34,12 @@ const Home = () => {
                     <div className='cat-img'>
 
                         <Link>
-                            <img src={require('./Images/cate-df-1_360x.jpg')} alt=''/>
+                            <img src={require('./Images/matte_black_d0b1e2f2-1591-4969-a021-5cb9c1ab12f0.jpg')} style={{height:"350px"}} alt=''/>
                         </Link>
 
                     </div>
                     <div className='cat-details'>
-                        <h5>Accessories</h5>
+                        <h5>Helmets</h5>
                         <h6>5 items</h6>
 
                     </div>
@@ -49,12 +50,12 @@ const Home = () => {
                     <div className='cat-img'>
 
                         <Link>
-                            <img src={require('./Images/cate-df-2_360x.jpg')} alt=''/>
+                            <img src={require('./Images/unlined_cruiser_0000s_0002_Layer_71.jpg')} style={{height:"350px"}} alt=''/>
                         </Link>
 
                     </div>
                     <div className='cat-details'>
-                        <h5>Bag Brand</h5>
+                        <h5>Gloves Brand</h5>
                         <h6>5 items</h6>
 
                     </div>
@@ -65,12 +66,12 @@ const Home = () => {
                     <div className='cat-img'>
 
                         <Link>
-                            <img src={require('./Images/cate-df-3_360x.jpg')} alt=''/>
+                            <img src={require('./Images/LEATHER_MOTO_JACKET_BLACK_FLAT.jpg')} style={{height:"350px"}} alt=''/>
                         </Link>
 
                     </div>
                     <div className='cat-details'>
-                        <h5>Clothing</h5>
+                        <h5>Jacket</h5>
                         <h6>5 items</h6>
 
                     </div>
@@ -81,7 +82,7 @@ const Home = () => {
                     <div className='cat-img'>
 
                         <Link>
-                            <img src={require('./Images/cate-df-4_360x.jpg')} alt=''/>
+                            <img src={require('./Images/pexels-jose-martin-segura-benites-1422456152-27352801.jpg')} style={{height:"350px"}} alt=''/>
                         </Link>
 
                     </div>

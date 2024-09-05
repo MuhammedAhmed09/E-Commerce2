@@ -16,11 +16,11 @@
 
 /* slide css */
 .slide .image {
-  height: 90vh;
+  height: 80vh;
   background: #e9ecef;
 }
 .slide p {
-  color: #0e0e0e;
+  color: #e9ecef;
   text-transform: capitalize;
   font-size: 6rem;
   font-weight: 800;
@@ -64,7 +64,7 @@
 
 /* shop css */
 .shop .shop-center {
-  background-image: url("/src/Images/d2c46b4a25816a9c5f07ed83b984991a.c6bc345c2347d64f242d.jpg");
+  background-image: url("/src/Images/pexels-photo-4045297.jpg");
   display: flex;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -78,21 +78,23 @@
   text-align: center;
   font-weight: 800;
   font-size: 3rem;
+  color: #a6d4fc;
   position: relative;
 }
 .shop .shop-center a {
-  color: #6c757d;
+  color: #e2e2e2;
   text-decoration: none;
   font-size: 20px;
   font-weight: 800;
   position: relative;
 }
 .shop .shop-center a:hover {
-  color: rgba(151, 238, 238, 0.596);
+  color: rgba(162, 245, 245, 0.596);
 }
 .shop .shop-center .span {
   font-size: 20px;
   font-weight: 800;
+  color: #a6d4fc;
 }
 .shop .shop-map {
   align-items: center;

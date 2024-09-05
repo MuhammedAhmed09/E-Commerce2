@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItems from './CartItems';
 import './Cart.css'
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
     const handleEmptyCart = () => onEmptyCart();
@@ -38,15 +38,6 @@ const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
             (
             <div>
                 <div>
-                    <Row className='text-head-cart'>
-                        <Col lg={4} className='img-name'>
-                            <p>PRODUCT</p>
-                            <p>DETAILS</p>
-                        </Col>
-                        <Col lg={3}><p>UNIT PRICE</p></Col>
-                        <Col lg={2}><p>QUANTITY</p></Col>
-                        <Col lg={3}><p>AMOUNT</p></Col>
-                    </Row>
                     <Row>
                         <FilledCart />
                     </Row>
