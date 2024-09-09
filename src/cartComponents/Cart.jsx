@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItems from './CartItems';
 import './Cart.css'
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
     const handleEmptyCart = () => onEmptyCart();
@@ -11,7 +11,7 @@ const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
         <div className='empty'>
             <p>Your cart is currently empty.</p>
             <Link to="/Shop">
-                <button className='btn-empty'>Back to Shop</button>
+                <button className='btn-back'>Back to Shop</button>
             </Link>
         </div>
     );
@@ -30,28 +30,31 @@ const Cart = ({ cart, onUpdateToCart, onRemoveFromCart, onEmptyCart }) => {
         </tbody>
     );
 
-
-    return (
-        <div className='box-cart'>
-            <p className='parghraph-head'>Shopping Cart</p>
-            { typeof cart.line_items !== 'undefined' && cart.line_items.length ?
-            (
-            <div>
-                <div>
+    const cartAll = () => {
+        if (cart.line_items && cart.line_items.length > 0) {
+            return (
+                <div className='cart--empty'>
                     <Row>
                         <FilledCart />
                     </Row>
+                    <button onClick={handleEmptyCart} className="btn-empty">Empty Cart</button>
                 </div>
+            )
+        } else if(cart.line_items && cart.line_items.length === 0){
+            return <EmptyCart />
+        } else {
+            return <div className='loader'></div>
+        }
+    }
 
-                <button onClick={handleEmptyCart} className="mt-5">Empty Cart</button>
-                </div>
-                )
-                :
-                (
-                <EmptyCart />
-                )
-                }
+    
+    return (
+        <Container className='box-cart'>
+            <p className='parghraph-head'>Shopping Cart</p>
+            <div className="container">
+                {cartAll()}
             </div>
+        </Container>
     );
 };
 

@@ -7,23 +7,21 @@ const CartItems = ({ item, onUpdateToCart, onRemoveFromCart }) => {
 
     return (
         <Container>
-            <table >
             <Row className='text-head-items' key={item.id}>
                 <Col md={6} sm={4}>
-                    {item.image && <img className='image-item' src={item.image.url} alt={item.name} style={{width:"100%"}} />}
+                    {item.image && <img className='image-item' src={item.image.url} alt={item.name} />}
                 </Col>
-                <Col md={6} sm={8}>
-                    <h4>Tittle: {item.name}</h4>
-                    <h3>Price: {item.line_total && item.line_total.formatted_with_symbol}</h3>
-                    <h3>Quantity: {item.quantity}</h3>
-                    <h3>
-                    <button onClick={() => handleUpdateToCart(item.id, item.quantity - 1)}>-</button>
-                    <button onClick={() => handleUpdateToCart(item.id, item.quantity + 1)}>+</button>
-                    </h3>
-                    <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
+                <Col md={6} sm={8} className='cart-details'>
+                    <h4><span>Tittle:</span> {item.name}</h4>
+                    <h4><span>Price:</span> {item.line_total && item.line_total.formatted_with_symbol}</h4>
+                    <h4><span>Quantity:</span> {item.quantity}</h4>
+                    <div className='quantity'>
+                    <button onClick={() => handleUpdateToCart(item.id, item.quantity - 1)}><b>-</b></button>
+                    <button onClick={() => handleUpdateToCart(item.id, item.quantity + 1)}><span>+</span></button>
+                    </div>
+                    <button className='btn-remove' onClick={() => handleRemoveFromCart(item.id)}><b>Remove</b></button>
                 </Col>
-            </Row>
-            </table>    
+            </Row> 
         </Container>
     );
 };
